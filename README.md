@@ -1,6 +1,6 @@
 # CIM111 Weblab - Spring 2019
 
-### Instructors
+### Instructor
 
 CIM111-T Communication Intl 2054 Eliot Rodriguez TuTh 5:00PM - 6:15PM [Class Site](https://github.com/eliot84/Weblab)
 
