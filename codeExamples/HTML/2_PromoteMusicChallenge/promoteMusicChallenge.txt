@@ -1,0 +1,22 @@
+      <!-- PRACTICE ACTIVITY: In Class
+
+        PROMOTE THE MUSIC CHALLENGE!
+        Make a web page that promotes your favorite band/artist
+        
+        PART 1
+        1. Title the page and provide the title in an H1 tag in the body as well.
+        2. Use a paragraph tag and give a brief description of the artist.
+        3. Make an ordered list that gives the band/artist top 5 songs.
+        4. Make an unordered list that gives 5 places where the band/artist has performed in the world.
+        5. Use horizontal lines to seperate the unordered & ordered lists.
+        
+
+        PART 2
+        1. Add a photo of your band/artist under the h1 title tag in the body.
+        2. Add a link to the official band/artist website. 
+        3. Make sure the added link opens a new window to the official site.
+        4. Add a 2 column table that shows the most recent albums made in the right column and the year that it was made in the left column from newest to oldest order (maximum 5 rows)
+        5. Add an Address tag so that people wanting to contact you can find the necessary information (use fake data :-) ) 
+
+        Bonus: Look up how to Use the style attribute in the body tag to change the background color of your page.
+      -->
