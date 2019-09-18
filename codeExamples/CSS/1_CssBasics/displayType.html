@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Property</title>
+</head>
+<body>
+
+	<style>
+		.setBlock{
+			display: block;
+			background-color: red;
+			height: 100px;
+			margin-bottom: 10px;
+		width: 100px;
+		}
+
+		.setInline{
+			display: inline;
+			background-color: red;
+			height: 100px;
+			margin-bottom: 10px;
+			width: auto;
+
+
+		}
+
+		.setInlineBlock{
+			display: inline-block;
+			background-color: red;
+			height: 100px;
+			margin-bottom: 10px;
+			width: auto;
+		}
+
+	</style>
+
+	<h1>Positioning elements using Display</h1>
+	<h2>Block</h2>
+	<div class="setBlock">Display: block</div>
+	<div class="setBlock">Display: block</div>
+	<div class="setBlock">Display: block</div>
+
+	<h2>Inline</h2>
+	<div class="setInline">Display: inline</div>
+	<div class="setInline">Display: inline</div>
+	<div class="setInline">Display: inline</div>
+	<br /><br />
+
+	<h2>Inline-Block</h2>
+	<div class="setInlineBlock">Display: inline-block</div>
+	<div class="setInlineBlock">Display: inline-block</div>
+	<div class="setInlineBlock">Display: inline-block HLLOOOOOO!!!!!!</div>
+
+</body>
+</html>
+
+<!-- 
+Inline elements:
+
+respect left & right margins and padding, but not top & bottom
+cannot have a width and height set
+allow other elements to sit to their left and right.
+see very important side notes on this here.
+
+
+Block elements:
+
+respect all of those
+force a line break after the block element
+acquires full-width if width not defined
+
+
+Inline-block elements:
+
+allow other elements to sit to their left and right
+respect top & bottom margins and padding
+respect height and width
+
+-->

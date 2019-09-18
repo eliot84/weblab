@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<style>
+		.lefty{
+			float: left;
+			height: 40px;
+			background-color: red;
+		}
+
+		.righty{
+			float: right;
+			height: 40px;
+			background-color: red;
+		}
+
+		.container{
+			width: 300px;
+			height: 200PX;
+			background-color: purple;
+		}
+
+		h2{
+			margin-top: 60px;
+		}
+
+	</style>
+
+	<h1>Positioning elements using Display</h1>
+	<div class="lefty">LEFT SIDE!</div>
+	<div class="righty">RIGHT SIDE!</div>
+
+	<h2>Inside a Div</h2>
+	<div class="container">
+		<div class="lefty">LEFT SIDE!</div>
+		<div class="righty">RIGHT SIDE!</div>
+	</div>
+
+</body>
+</html>
+
+<!-- 
+Inline elements:
+
+respect left & right margins and padding, but not top & bottom
+cannot have a width and height set
+allow other elements to sit to their left and right.
+see very important side notes on this here.
+
+
+Block elements:
+
+respect all of those
+force a line break after the block element
+acquires full-width if width not defined
+
+
+Inline-block elements:
+
+allow other elements to sit to their left and right
+respect top & bottom margins and padding
+respect height and width
+
+-->
