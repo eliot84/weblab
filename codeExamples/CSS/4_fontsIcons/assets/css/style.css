@@ -1,0 +1,105 @@
+body{
+  background-image: url("../images/fullbloom.png");
+
+}
+
+p{
+font-family: 'Pacifico', cursive;
+}
+
+article{
+  text-align: center;
+}
+
+.dogs{
+  color: brown;
+  font-size: 200px;
+  text-align: left;
+}
+
+header{
+  width: auto;
+  height: 200px;
+  background-image: linear-gradient(to right, green , orange);
+  text-align: center;
+  line-height: 200px;
+  color: white;
+}
+
+#goLefty{
+  text-align: left;
+  color: green;
+}
+
+.freddy{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 60px;
+}
+
+.fancy{
+  font-family: 'Monoton', cursive;
+  font-size: 42px;
+}
+
+.faster{
+  font-family: 'Faster One', cursive;
+  font-size: 42px;
+}
+
+.annie{
+  font-family: 'Annie Use Your Telescope', cursive;
+  font-size: 42px;
+}
+
+.byHand{
+  font-family: 'Rock Salt', cursive;
+  font-size: 42px;
+}
+
+.menu {
+    background-color: orange;
+    width: 150px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    margin: 4px auto auto;
+    cursor: pointer;
+}
+.menu:hover {
+    background-image: url("../images/justwaves.png");
+    width: 150px;
+    border: none;
+    color: green;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 24px;
+    margin: 4px auto auto;
+    cursor: pointer;
+}
+
+#navi{
+  width: 100%;
+  background-image: url("../images/connectwork.png");
+}
+
+.fas{
+  font-size: 60px;
+}
+
+.fa-arrow-circle-right{
+  color: pink;
+}
+
+.fa-stroopwafel{
+  color: lightblue;
+}
+
+.fa-spinner{
+  color: green;
+}
