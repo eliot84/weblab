@@ -1,0 +1,64 @@
+<!-- Shorthand for creating columns and rows
+
+			grid-template-columns: repeat(4, 1fr); 
+
+			if you use this for rows it will loop the pattern if you have more items than fits in the 1st iteration.
+			grid-template-rows: repeat(4, 1fr); 
+-->
+
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+		<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width-initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div class="item">a</div>
+		<div class="item">b</div>
+		<div class="item">c</div>
+		<div class="item">d</div>
+		<div class="item">e</div>
+		<div class="item">f</div>
+		<div class="item">g</div>
+		<div class="item">h</div>
+		<div class="item">i</div>
+		<div class="item">j</div>
+		<div class="item">k</div>
+		<div class="item">l</div>
+				<div class="item">a</div>
+		<div class="item">b</div>
+		<div class="item">c</div>
+		<div class="item">d</div>
+		<div class="item">e</div>
+		<div class="item">f</div>
+		<div class="item">g</div>
+		<div class="item">h</div>
+		<div class="item">i</div>
+		<div class="item">j</div>
+		<div class="item">k</div>
+		<div class="item">l</div>
+	</div>
+
+	<style>
+		.container{
+			display: grid;
+			grid-gap: 20px;
+			/* this will make 4 columns each with 1 fr set to its width property. */
+			/*grid-template-columns: repeat(4, 1fr);  */
+
+			grid-template-columns: 1fr 2fr 3fr 1fr;
+
+			/* this will make 4 columns for each fr unit provided. So in total there will be 8 columns */ 
+			/* grid-template-columns: repeat(4, 1fr 2fr); */
+		}
+
+		.item{
+			background-color: yellow;
+		}
+
+	</style>
+
+</body>
+</html>

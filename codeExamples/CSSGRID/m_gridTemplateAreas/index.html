@@ -1,0 +1,84 @@
+<!-- Grid Template Areas
+
+	    This is a convenient tool for webpage layout organization. Although this tool is optional - it makes working with CSS Grid much easier when working on layouts.
+
+	    1. First you need to decide what your areas will be
+	    2. Assign them a grid-area in css
+	    3. Determine the columns involved in your layout
+	    4. Construct a Grid-Template Area
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	   <meta charset="UTF-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	   <title>Grid Template Areas</title>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>Header section goes here</header>
+		    <nav>Navigation goes here.</nav>
+		    <article>The Content Goes Here!</article>
+		    <footer>Copyrights and stuff</footer>
+		</div>
+
+		<style>
+			html,body{
+		      height: 100%;
+		    }
+
+		    body{
+		      margin: 0;
+		      background-color: #D3FFF3;
+		    }
+
+		    .container {
+		      display: grid;
+		      grid-gap: 10px;
+		      height: 100%;
+		      
+		      /* 3. Determine the columns involved in your layout */
+		      grid-template-rows: 100px 24px 1fr 80px;
+
+		      /* 4. Construct a Grid-Template Area */
+		      grid-template-areas:
+		      			"header"
+		                "nav"
+		                "article"
+		                "footer";
+		    }
+
+		    header{
+		    	grid-area: header;
+		    	background-color: #7F0799;
+		        color: #D3FFF3;
+
+		    }
+		    nav {
+		      grid-area: nav;
+		      background-color: #7E57C2;
+		      color: #D3FFF3;
+
+		      text-align: right;
+		    }
+
+		    article {
+		       grid-area: article;
+		       background-color: #AFBBF2;
+		    }
+
+		    footer {
+		        grid-area: footer;
+		        background-color: #292E1E;
+
+		        color: white;
+		        text-align: center;
+		        line-height: 80px;
+		        font-style: italic;
+		    }
+		</style>
+	</body>
+</html>
