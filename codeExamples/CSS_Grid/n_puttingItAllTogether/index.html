@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	   <meta charset="UTF-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	   <title>Grid Template Areas</title>
+	</head>
+
+	<body>
+		<div class="container">
+
+		<header></header>
+
+	    <nav>	
+	    	<a href="#">Media Queries</a>
+			<a href="#">are</a>
+			<a href="#">Super Cool</a>
+		</nav>
+
+	    <article>
+	    	<h1>THE ARTICLE:</h1>
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	    	<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+	 </article>
+
+		<aside>
+			<h1>THE ASIDE:</h1> 
+
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</aside>
+
+	    <footer>Footer: Copyrights and stuff</footer>
+	</div>
+
+
+
+	    <style>
+	html,body{
+      height: 100%;
+    }
+    body{
+      margin: 0;
+      background-color: green;
+    }
+    .container {
+      display: grid;
+      height: 100%;
+      /*grid-template-columns: 1fr; */
+      grid-template-rows: 300px 20px 1fr 1fr 80px;
+
+      /* Define your template page areas */
+      grid-template-areas:
+      			"header  header  header"
+                "nav     nav     nav"
+                "article article article"
+                "aside   aside   aside"
+                "footer  footer  footer"; 
+    }
+
+    nav {
+      grid-area: nav;
+      text-align: right;
+      background-color: orange;
+    }
+
+    article {
+       grid-area: article;
+    	background-color: #c2e78c;
+       margin: 10px;
+       padding: 10px;
+    }
+
+    aside {
+    	grid-area: aside;
+    	background-color: #c2e78c;
+    	margin: 10px;
+    	padding: 10px;
+    }
+
+    footer {
+        grid-area: footer;
+        background-color: orange;
+        text-align: center;
+        line-height: 60px;
+
+    }
+ 
+    footer {
+      grid-area: footer;
+       background-color: orange;
+       font-style: italic;
+       color: white;
+      margin-top: 20px;
+    }
+
+    a{
+	margin-right: 10px;
+	text-decoration: none;
+	color: white;
+    }
+
+	a:hover{
+		text-decoration: underline;
+		color: black;
+	}
+
+	header{
+	grid-area: header;
+	background-color: black;
+    background-image: url("dpMobile.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+	}
+
+
+		/* tablet sized devices */
+	@media only screen and (min-width: 500px) {
+
+		body{
+		background-color: red;
+		}
+
+		header{
+		background-color: white;
+	    background-image: url("Deadpool.jpg");
+	    }
+
+		.container {
+		display: grid;
+		grid-template-areas:
+		  "header header header"
+		  "nav    nav    nav"
+		  "article article aside"
+		  "footer footer footer";
+		}
+	}
+
+
+	/* MEDIA QUERIES desktop sized devices */ 
+	@media only screen and (min-width: 768px) {
+		body{
+		background-color: green;
+		}
+
+		header{
+	    background-image: url("Deadpool.jpg");
+	    }
+
+	
+	}
+	    </style>
+	</body>
+</html>
+
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Media Queries</title>
+		<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Cabin+Sketch" rel="stylesheet">
+	</head>
+	<body>
+		<header></header>
+		<div class="container">
+		<div class="magicBox"></div>
+		<div class="magicBox2"></div>
+		<div class="magicBox3"></div>
+
+		
+		</div>
+
+		<!-- CSS Using style tag for prototyping purposes only -->
+		<style>
+			/* Mobile first responsive design the below */
+		
+
+			.magicBox{
+					width: 300px;
+					height: 300px;
+					background-image: url("assets/images/a.jpg");
+					background-repeat: no-repeat;
+					background-position: center center;
+					/*background-attachment: fixed;*/
+					/*background-size: cover;*/
+					background-size: contain;
+					display: block;
+			}
+
+					.magicBox2{
+					width: 300px;
+					height: 300px;
+					background-image: url("assets/images/b.jpg");
+					background-repeat: no-repeat;
+					background-position: center center;
+					/*background-attachment: fixed;*/
+					/*background-size: cover;*/
+					background-size: contain;
+					display: none;
+			}
+
+					.magicBox3{
+					width: 300px;
+					height: 300px;
+					background-image: url("assets/images/c.jpg");
+					background-repeat: no-repeat;
+					background-position: center center;
+					/*background-attachment: fixed;*/
+					/*background-size: cover;*/
+					background-size: contain;
+					display: none;
+			}
+
+			@media only screen and (min-width: 500px) {
+				.magicBox2{
+					display: block
+		
+				}
+
+				.magicBox{
+					display: none;
+				}
+			} /* close media query */
+
+
+			@media only screen and (min-width: 768px) {
+				.magicBox2{
+					display: none;
+				}
+
+				.magicBox3{
+					display: block;
+				}
+
+			} /* close media query 768px */
+		</style>
+
+	</body>
+</html>
+
+
+
+

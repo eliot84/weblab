@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MEDIA QUERIES: SCRATCH EXAMPLE</title>
+	<meta charset="UTF-8">
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+</head>
+<body>
+
+
+	<p>change colors</p>
+
+	<style>
+
+		p{
+			font-family: tacoma;
+		}
+      /* No media query needed for small size */
+	   body{
+	   	background-color: gray;
+	   }
+   
+
+
+
+	/* MEDIUM SIZE */
+
+	@media only screen and (min-width: 500px) {
+		body{
+			background-color: blue;
+		    }
+		}
+
+     /* LARGE SIZE */ 
+	@media only screen and (min-width: 768px){
+	  		body{
+			background-color: yellow;
+		    }
+	}
+	</style>
+
+</body>
+</html>

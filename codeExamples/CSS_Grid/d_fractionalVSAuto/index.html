@@ -1,0 +1,81 @@
+<!-- Using a Fractional Unit vs Auto in determining column width -->
+
+
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+		<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width-initial-scale=1.0">
+</head>
+<body>
+
+<h1>Using Fractionals</h1>
+
+<div class="with">
+	<div class="item">Your content will wrap around the div size as needed.</div>
+	<div class="item">2</div>
+	<div class="item">3 The rain in spain falls mainly in plains.</div>
+	<div class="item">4</div>
+	<div class="item"></div>
+	<div class="item">6</div>
+	<div class="item">💩</div>
+	<div class="item">8</div>
+	<div class="item">Your content determines the height of the row in this example</div>
+	<div class="item">10</div>
+	<div class="item">11</div>
+</div>
+
+
+
+<!-- Uncomment this code and comment the above code to see the different between using auto and fraction --> 
+
+<!--
+<h1>Without using Fractionals</h1>
+<div class="without">
+	<div class="item">Your content will wrap around the div size as needed.</div>
+	<div class="item">2</div>
+	<div class="item">3 The rain in spain falls mainly in plains.</div>
+	<div class="item">4</div>
+	<div class="item">5</div>
+	<div class="item">6</div>
+	<div class="item">7</div>
+	<div class="item">💩</div>
+	<div class="item">9</div>
+	<div class="item">10</div>
+	<div class="item">11</div>
+</div>
+-->
+
+<style>
+	.with{
+		display: grid;
+		grid-gap: 20px;
+		/* fr (fractional unit) use this instead of percentages to avoid complicated issues down the road.  */
+		grid-template-columns: 100px 1fr 1fr; 
+
+		/*the difference between using auto and using fr unit is that auto will resize to the actual size of content */
+		/* grid-template-columns: auto 1fr 1fr; */
+	}
+
+	
+	.without{
+		display: grid;
+		grid-gap: 40px;
+
+		grid-template-columns: 100px auto auto; 
+	}
+
+	.item{
+		background-color: green;
+		color: white;
+		height: auto;
+		padding: 10px;
+	}
+
+</style>
+
+
+</body>
+</html>
+
