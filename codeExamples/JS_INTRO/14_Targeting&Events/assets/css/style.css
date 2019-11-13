@@ -1,0 +1,52 @@
+
+body{
+	background-color: orange;
+	color: white;
+}
+
+.contain{
+	display: grid;
+	 justify-content: center;	
+	 grid-gap: 30px;
+
+
+}
+
+#panel{
+	background-color: green;
+	border-radius: 10%;
+	color: white;
+	height: 200px;
+	width: 300px;
+	margin-top: 10px;
+	padding: 10px;
+
+}
+
+#panel2
+{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+h1{
+	font-size: 32px;
+}
+
+#user-text{
+	font-size: 40px;
+	background-color: orange;
+}
+
+#myBtn{
+	height: 100px;
+	width: 100px;
+	background-color: pink;
+}
+
+#changeBody{
+	height: 100px;
+	width: 100px;
+	background-color: purple;
+}

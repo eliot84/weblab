@@ -1,0 +1,32 @@
+
+body{
+	background-color: #000080;
+	color: white;
+}
+
+.container{
+	display: grid;
+}
+
+.calculator{
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+#result{
+	height: 150px;
+	width: 200px;
+	text-align: center;
+	line-height: 140px;
+	background-color: green;
+}
+
+input{
+	margin-bottom: 10px;
+	font-size: 24px;
+}
+
+button{
+	height: 34px;
+	width: 60px;
+}

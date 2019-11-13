@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>My First Function</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+    <h1>CALCULATOR</h1>
+
+    
+    <div class="calculator">
+      <div class="program">
+
+       <p>To use this calculator please input a number decide on an arithmatic operator and input the second number. Press the = sign when done </p>
+        
+        <input type="text" id="input">
+
+        <button id="Add" value="+">+</button>
+        <button id="Subtract" value="-">-</button>
+        <button id="Multiply" value="*">*</button>
+        <button id="Divide" value="/">/</button>
+
+        <button id="equals">=</button>
+        <button id="clear">Clear</button>
+      </div>
+
+      <div id="result">0</div>
+
+  </div>
+
+
+
+
+    <script>
+    	//make a calculator using functions and the operations will be: +  - *  / 
+    	// prompt the user what operation they are trying to make then ask for the 1st number and then ask for the 2nd number. 
+
+    	//Perform the operation 
+    	//print to the screen "Your answer is: "
+
+
+
+
+      //SET THE GLOBAL VARIABLES YOU WILL BE USING
+      var x; //What is the first Number
+      var y; //What is the second number
+      var operation; //What operation needs to be performed
+      var answer = 29; 
+
+      var numbers = [-1, -1, "off"]; 
+      //0 = 1st number 1 = 2nd number 2 = whether a query selector has been picked
+      //Default states are -1 and off indicating no user input has been entered.
+
+
+      //EVENT LISTENERS
+
+      /* Add Event Listeners to all of our buttons */
+      var add = document.getElementById("Add");
+      var subtract = document.getElementById("Subtract");
+      var multiply = document.getElementById("Multiply");
+      var divide = document.getElementById("Divide");
+
+      /* ADD Event Listeners to all buttons we wish to track user interaction for */
+      add.addEventListener("click", function(){
+
+        var operatorType = "#Add"; //Save the name of the specific button id
+        update(operatorType); //check and update the calculator
+      });
+
+
+      subtract.addEventListener("click", function(){
+
+        var operatorType = "#Subtract";
+        update(operatorType);
+      });
+
+
+      multiply.addEventListener("click", function(){
+
+        var operatorType = "#Multiply";
+        update(operatorType);
+      });
+
+
+     divide.addEventListener("click", function(){
+
+        var operatorType = "#Divide";
+        update(operatorType);
+      });
+
+
+
+      function update(operator){
+        //if there is no first number set
+
+
+        var operator = document.querySelector(operator).getAttribute("value");
+        var getNumber = document.getElementById("input").value;
+
+        if (numbers[0] == -1){
+          //save the first number inputed 
+         numbers[0] = parseInt(getNumber);
+         numbers[2] = operator;
+
+         //Leave input field empty for next number to be inputed.
+         document.getElementById("input").value = " ";
+
+         //check that the number is going through
+         console.log("1st Number: " + numbers[0]);
+
+         //the 1st number is already set and we need to set the second number.
+        }
+        else{
+          //change only the operator the 1st number was already saved but the user has pressed a different operator
+          numbers[2] = operator;
+          console.log("operator change: " + numbers[2]);
+        }
+      }
+
+
+      //Equals Event Listener
+
+      /* Add Event Listener to all div's that are assigned an ID of operator */
+      var equals = document.getElementById("equals");
+
+      /* If one of the operators is clicked do the following */
+      equals.addEventListener("click", function(){
+
+          var getNumber = document.getElementById("input").value;
+          var result;
+          numbers[1] = parseInt(getNumber);
+
+        if(numbers[0] !== -1 && numbers[2] !== "off"){
+
+
+
+          if(numbers[2] == "+"){
+           result = addThis(numbers[0], numbers[1]);
+          }
+
+          if(numbers[2] == "-"){
+           result = subtractThis(numbers[0], numbers[1]);
+          }
+
+          if(numbers[2] == "*"){
+           result = multiplyThis(numbers[0], numbers[1]);
+          }
+
+          if(numbers[2] == "/"){
+           result = divideThis(numbers[0], numbers[1]);
+          }
+
+          //Display the answer in the console.
+          console.log("The result: " + result);
+
+          //Put the answer in the result box
+          document.getElementById("result").innerHTML = result; //print to the element with an ID of result
+          
+          //Save the result as the 1st number and reset the 2nd number and operation type for next operation.
+          numbers[0] = result;
+          numbers[1] = -1;
+          numbers[2] = "off";
+          document.getElementById("input").value = " "; //clears the input bar
+
+          console.log(numbers);
+        }
+      });
+
+
+      //If the clear button is selected - erase the entire array
+      var clear = document.getElementById("clear");
+      clear.addEventListener("click", function(){
+
+        numbers[0] = -1;
+        numbers[1] = -1;
+        numbers[2] = "off";
+        document.getElementById("result").innerHTML = 0; //prints to the element with an ID of result
+        document.getElementById("input").value = " "; //clears the input bar
+
+        console.log("calculator is cleared");
+      });
+
+
+
+
+      function interaction(operatorType){
+         // Get the operator value selected + - * /
+        var operator = document.querySelector('#Add').getAttribute("value");
+
+        //DEBUG: Test that the value is the one selected uncomment below line to see in console.
+        //console.log("the operator is: " + operator);
+        //////////////////////////////////////////////////
+
+        var getNumber = document.getElementById("input").value;
+      }
+
+
+
+      //Operations to be used for calculating
+      function addThis(x, y){
+        result = x + y;
+        return result;
+      }
+
+      function subtractThis(x, y){
+        result = x - y;
+        return result;
+      }
+
+      function multiplyThis(x, y){
+        result = x * y;
+        return result;
+      }
+
+      function divideThis(x, y){
+        result = x / y;
+        return result;
+      }
+
+    </script>
+
+	</body>
+</html>

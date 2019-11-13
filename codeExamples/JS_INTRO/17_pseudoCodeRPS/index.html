@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissor</title>
+</head>
+<body>
+
+	<div class="container">
+		<header><h1>Rock Paper Scissor</h1></header>
+		<article>
+			<div class="box" id="rock">Rock</div>
+			<div class="box" id="paper">Paper</div>
+			<div class="box" id="scissors">Scissor</div>
+		</article>
+
+		<aside>
+			<h2 class="scoreTitle">Score</h2>
+			<div class="scores">
+			     Player: <span id="pScore"> 0</span><br />
+				 Computer: <span id="cScore"> 0</span>
+			</div>
+			
+			<div class="cPick"><h1>Computer Picked: <span id="compPick">:-)</span></h1></div>
+		</aside>
+
+	</div>
+
+</body>
+</html>
+
+
+
+<style>
+	
+	article{
+		display: grid;
+		grid-gap: 15px;
+	    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+
+	.box{
+		height: 100px;
+		background-color: orange;
+		color: white;
+		text-align: center;
+		line-height: 100px;
+	}
+
+	.box:hover{
+		background-color: green;
+		cursor: pointer;
+	}
+
+	.box:active{
+		background-color: black;
+	}
+
+	aside{
+		display: grid;
+		grid-gap: 15px;
+		grid-template-areas: "sTitle sTitle"
+		                     "scores cPick";
+	}
+
+	.scoreTitle{
+		grid-area: sTitle;
+	}
+	.scores{
+	    height: 100px;
+		grid-area: scores;
+		background-color: gray;
+		color: white;
+	}
+	.cPick{
+		text-align: center;
+		line-height: 50px;
+		grid-area: cPick;
+		background-color: black;
+		color: white;
+	}
+</style>
+
+<script type="text/javascript">
+
+	var choices = ["rock", "paper", "scissor"];
+	var playerScore = 0;
+	var computerScore = 0;
+
+	  //References to update the scores
+	  var pScore = document.getElementById("pScore");
+	  var cScore = document.getElementById("cScore");
+
+      //Reference to update the computer selection
+      var displayCPick = document.getElementById("compPick");
+
+
+      //If user selects rock
+	  var rockRef = document.getElementById("rock");
+	  //scissor beats
+	  //rock   tie 
+	  //paper loses
+
+      rockRef.addEventListener("click", function(){
+        var cPicked = compPlay();
+ 
+        if(cPicked == "rock"){
+        	displayCPick.textContent = cPicked;
+
+        }
+        if(cPicked == "paper"){
+        	computerScore++;
+        	cScore.textContent = computerScore;
+            displayCPick.textContent = cPicked;
+        }
+        if(cPicked == "scissor"){
+        	playerScore++;
+        	pScore.textContent = playerScore;
+        	displayCPick.textContent = cPicked;
+        }
+      });
+      ////////////////////////////////////////////////////
+
+      //If user selects paper
+      var paperRef = document.getElementById("paper");
+
+      paperRef.addEventListener("click", function(){
+       var cPicked = compPlay();
+        //tie
+        if(cPicked == "paper"){
+        	displayCPick.textContent = cPicked;
+
+        }
+        //computer wins
+        if(cPicked == "scissor"){
+        	computerScore++;
+        	cScore.textContent = computerScore;
+            displayCPick.textContent = cPicked;
+        }
+        //player wins
+        if(cPicked == "rock"){
+        	playerScore++;
+        	pScore.textContent = playerScore;
+        	displayCPick.textContent = cPicked;
+        }
+      });
+
+      //If user selects scissors
+      var scissorRef = document.getElementById("scissors");
+
+      scissorRef.addEventListener("click", function(){
+        var cPicked = compPlay();
+        //tie
+        if(cPicked == "scissor"){
+        	displayCPick.textContent = cPicked;
+
+        }
+        //computer wins
+        if(cPicked == "rock"){
+        	computerScore++;
+        	cScore.textContent = computerScore;
+            displayCPick.textContent = cPicked;
+        }
+        //player wins
+        if(cPicked == "paper"){
+        	playerScore++;
+        	pScore.textContent = playerScore;
+        	displayCPick.textContent = cPicked;
+        }
+      });
+
+
+      //Computer picks a random number 
+      function compPlay(){
+          var choice = Math.floor(Math.random() * choices.length);
+          console.log("Computer pics: " + choices[choice] + choice);
+         return choices[choice];
+   }     
+
+</script>

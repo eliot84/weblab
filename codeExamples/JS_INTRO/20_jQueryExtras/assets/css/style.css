@@ -1,0 +1,52 @@
+
+body{
+	background-color: green;
+}
+
+.container{
+	display: grid;
+	grid-gap: 20px;
+
+}
+
+.sectionDogs{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+}
+
+.dogCatcher{
+	background-image: url("../images/catcher.png");
+	height: 200px;
+	width: 200px;
+	background-size: cover;
+	background-position: bottom right;
+}
+
+
+.boxes{
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	background-image: url("../images/dog.jpg");
+	color: white;
+	background-size: cover;
+	background-position: bottom right;
+	border-style: solid;
+	border-color: blue;
+
+}
+
+.alejandroBark{
+	border-color: red;
+}
+
+.addText{
+	height: 100px;
+	width: 100px;
+	background-color: orange;
+	color: white;
+	margin-top: 200px;
+}

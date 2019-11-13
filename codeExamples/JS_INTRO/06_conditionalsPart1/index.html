@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Conditional Demo</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+      // Declaring 2 variables and giving them values to hold.
+      var color = "red";
+      var number = 8;
+
+      //Explain the Structure of a conditional
+      if(number == 8){
+        console.log("The number is equal to 8 :-) ");
+      }
+      /*
+      if ( check if condition is true using comparison operator ) {
+        //do this
+      }
+      */
+
+      /* JAVASCRIPT COMPARISON OPERATORS
+      ==  equal to
+      !=  not equal
+      > greater than
+      < less than
+      >=  greater than or equal to
+      <=  less than or equal to
+      === equal value and equal type 
+      !== not equal value or not equal type
+      */
+
+
+      if(number < 2){
+      }
+      else{
+        console.log("number is not less than 2 ");
+      }
+
+      //variable modification
+      color = "brown";
+
+      if (color != "red"){
+        console.log("Something has changed.. the color is no longer red. ");
+      }
+
+      //changing the variable back to red just because.
+      color = "red";
+
+
+      if(color == "red"){
+        console.log("The color is equal to red!!");
+      }else{
+        console.log("The color is not equal to red");
+      }
+
+
+
+
+
+      console.log("////////////////////////////");
+      console.log("FURTHER EXAMPLES FOR REFERENCING");
+
+      // FURTHER EXAMPLES FOR REFERENCING
+
+      //1. true equal value and type
+      if ("4" === "4") {
+        console.log("1 is True");
+      }
+      else {
+        console.log("1 is False");
+      }
+
+      //2. false equal type but not equal value
+      if ("4" === "5") {
+        console.log("2 is True");
+      }
+      else {
+        console.log("2 is False");
+      }
+
+      //3. false equal value but not equal type
+      if ("4" === 4) {
+        console.log("3 is True");
+      }
+      else {
+        console.log("3 is False");
+      }
+
+      //4. true equal value
+      if ("4" == 4) {
+        console.log("4 is True");
+      }
+      else {
+        console.log("4 is False");
+      }
+
+      //5. True equal value and type using String Concatenation
+      if (("5" + "5") === "55") {
+        console.log("5 is True");
+      }
+      else {
+        console.log("5 is False");
+      }
+
+      //6. True string concatenation makes a string that puts 6 and 5 together
+      if ((6 + "5") === "65") {
+        console.log("6 is True");
+      }
+      else {
+        console.log("6 is True");
+      }
+
+     
+    </script>
+
+  </body>
+</html>

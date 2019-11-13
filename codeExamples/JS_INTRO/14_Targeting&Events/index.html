@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Events! DOCUMENT OBJECT MODEL </title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  </head>
+ <body>
+       <!--  EVENT LISTENERS CAN DO THE FOLLOWING:
+
+      - The user clicking the mouse over a certain element or hovering the cursor over 
+        a certain element.
+
+      - The user pressing a key on the keyboard.
+      
+      - The user resizing or closing the browser window.
+     
+      - A web page finishing loading.
+    
+      - A form being submitted.
+     
+      - A video being played, or paused, or finishing play.
+     
+      - An error occurring.
+      -->
+
+      <div class="contain">
+        <div id="panel">
+            <h1>You just typed: <span id="user-text">...Nothing.</span> </h1>
+        </div>
+    
+
+      <div id="panel2">
+          <div id="myBtn">click to console.log</div>
+          <div id="changeBody">Click me to change color</div>
+      </div>
+    </div> <!-- container -->
+
+    <!-- Javascript code goes at the end of our document to ensure the user-text
+         span exists when we try to access it in javascript. -->
+
+      <!-- GO TO THE WINDOW OBJECT IN THE CONSOLE TYPE "window" and press enter -->
+
+
+    <!-- EVENT LISTENERS: Listen for user interactions to trigger a function (snippet of code) --> 
+    <script type="text/javascript">
+
+      //1. Console.log something based on clicking a custom div
+      var btnRef = document.getElementById("myBtn");
+
+      btnRef.addEventListener("click", function(){
+        console.log("Hello!! you clicked me!");
+      });
+
+
+      //2. Change the color of the background based on a click.
+      var btnRef2 = document.getElementById("changeBody");
+
+      btnRef2.addEventListener("click", function(){
+          document.body.style.backgroundColor = "red";
+      });
+
+      //3. APPLY AN EVENT LISTENER TO AN ENTIRE WEB PAGE INSTEAD OF A SPECIFIC ELEMENT in this case listens for a key click
+      var userText = document.getElementById("user-text");
+
+      document.onkeyup = function(event) {
+      userText.textContent = event.key;
+      console.log("Key pressed: " + "Key: " + event.key + " Code: " + event.keyCode);
+      };
+
+/* REFERENCE 
+
+ dom attributes: https://www.w3schools.com/jsref/dom_obj_document.asp
+ events:   https://www.w3schools.com/js/js_events.asp
+ full dom documentation: https://developer.mozilla.org/en-US/docs/Web/API/Document
+
+*/
+    </script>
+  </body>
+</html>
